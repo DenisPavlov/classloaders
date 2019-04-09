@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) throws MalformedURLException, ClassNotFoundException {
-        Person person = new Person();
+        Person person = new Person("dsadsa");
         ClassLoader classLoader = person.getClassLoader();
         System.out.println(classLoader);
 
