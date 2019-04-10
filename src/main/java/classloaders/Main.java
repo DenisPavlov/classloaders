@@ -7,6 +7,7 @@ import java.net.URLClassLoader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws MalformedURLException, ClassNotFoundException {
@@ -22,6 +23,10 @@ public class Main {
 
         ClassLoader parentClassLoader = classLoader.getParent();
         System.out.println(parentClassLoader);
+
+        String s = Arrays.toString(((URLClassLoader)Person.class.getClassLoader()).getURLs());
+
+        System.out.println(s);
 
 
 //        URLClassLoader pluginClassLoader = new URLClassLoader(new URL[]{new URL("file:dsadsa")});
